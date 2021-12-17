@@ -99,7 +99,7 @@ std::string type_to_str(const uint32_t p_type)
 
 std::string flags_to_str(const uint32_t p_flags)
 {
-    std::string ret { 3, '-' };
+    std::string ret(3, '-');
 
     if(p_flags & 4)
         ret.at(0) = 'r';
