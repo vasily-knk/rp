@@ -107,6 +107,10 @@ int main(int argc, char* argv[])
             }
             
             Program p(program_path, arch);
+
+            {
+                p.do_my_test();
+            }
             
             if(display->count > 0)
             {

@@ -78,6 +78,8 @@ class Program
          */
         uint64_t get_image_base_address(void);
 
+        void do_my_test();
+
     private:
         
         std::shared_ptr<CPU> m_cpu; /*!< a pointer on the CPU used by your program*/

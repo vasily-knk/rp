@@ -66,6 +66,8 @@ class CPU
             std::mutex &m
         ) = 0;
 
+        virtual void do_my_test_cpu() {};
+
         /*! The different architectures RP++ handles */
         enum E_CPU
         {

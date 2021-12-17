@@ -184,3 +184,17 @@ uint64_t Program::get_image_base_address(void)
 {
     return m_exformat->get_image_base_address();
 }
+
+void Program::do_my_test()
+{
+    auto sections = m_exformat->get_executables_section(m_file);
+
+    for (auto const &section : sections)
+    {
+        auto const *data = section->get_section_buffer();
+        m_cpu->do_my_test_cpu();
+
+    }
+
+
+}

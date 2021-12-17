@@ -50,6 +50,16 @@ CPU::E_CPU Elf::extract_information_from_binary(std::ifstream &file)
     file.seekg(0, std::ios::beg);
     file.read((char*)buf.data(), EI_NIDENT);
 
+    unsigned short type = 0;
+
+	{
+        auto const os = buf.at(EI_OSABI);
+        file.read((char*)&type, 2);
+
+
+	    int aaa = 5;
+	}
+
     switch(buf.at(EI_CLASS))
     {
         case ELFCLASS32:
